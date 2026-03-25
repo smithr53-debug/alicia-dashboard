@@ -18,9 +18,10 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);min-height:100vh;}
 
+/* HEADER */
 .header{background:var(--ink);position:relative;overflow:hidden;}
 .hbg{position:absolute;font-family:'Cormorant Garamond',serif;font-size:160px;font-weight:600;color:rgba(255,255,255,0.03);top:-20px;left:-10px;line-height:1;user-select:none;pointer-events:none;}
-.hinner{padding:28px 32px 20px;display:flex;align-items:flex-end;justify-content:space-between;position:relative;z-index:1;}
+.hinner{padding:28px 32px 22px;display:flex;align-items:flex-end;justify-content:space-between;position:relative;z-index:1;}
 .hgreet{font-family:'Cormorant Garamond',serif;font-size:13px;font-style:italic;color:var(--muted);margin-bottom:4px;letter-spacing:0.04em;}
 .hname{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;color:var(--warm-white);letter-spacing:-0.5px;line-height:1;}
 .hsub{font-size:11px;color:var(--muted);margin-top:4px;font-weight:300;letter-spacing:0.06em;}
@@ -28,48 +29,23 @@ body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);
 .hdnum{font-family:'Cormorant Garamond',serif;font-size:44px;color:var(--rose);line-height:1;}
 .hdday{font-size:10px;color:var(--muted);font-weight:300;letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;}
 
-.wbar{background:#1E1A16;padding:12px 32px;display:flex;gap:4px;justify-content:space-between;}
-.wpill{flex:1;text-align:center;padding:7px 3px 9px;border-radius:18px;}
-.wpill.today{background:var(--rose);}
-.wpill-d{font-size:9px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:5px;}
-.wpill.today .wpill-d{color:rgba(255,255,255,0.8);}
-.wpill-n{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(255,255,255,0.45);line-height:1;}
-.wpill.today .wpill-n{color:white;font-weight:600;}
-.wpill.hev .wpill-n{color:rgba(255,255,255,0.75);}
-.pip{width:4px;height:4px;border-radius:50%;background:var(--rose-mid);margin:3px auto 0;}
-.wpill.today .pip{background:rgba(255,255,255,0.6);}
+/* LAYOUT */
+.main{max-width:820px;margin:0 auto;padding:28px 20px;}
+.cols{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start;}
 
-.tabnav{background:var(--warm-white);border-bottom:1px solid var(--border);display:flex;padding:0 32px;position:sticky;top:0;z-index:100;}
-.tablink{padding:14px 18px;font-size:13px;font-weight:400;color:var(--muted);border-bottom:2px solid transparent;cursor:pointer;letter-spacing:0.02em;transition:all 0.15s;white-space:nowrap;}
-.tablink:hover{color:var(--mid);}
-.tablink.active{color:var(--rose);border-bottom-color:var(--rose);font-weight:500;}
-
-.tabcontent{display:none;}
-.tabcontent.active{display:block;}
-
-.main{max-width:900px;margin:0 auto;padding:24px 20px;}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.fw{grid-column:1/-1;}
-
+/* CARDS */
 .card{background:var(--warm-white);border:1px solid var(--border);border-radius:14px;overflow:hidden;}
-.ch{padding:13px 18px 10px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
-.ct{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--ink);}
+.ch{padding:14px 18px 11px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.ct{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--ink);}
 .pill{font-size:10px;font-weight:500;padding:3px 9px;border-radius:18px;letter-spacing:0.03em;}
-.p-rose{background:var(--rose-light);color:var(--rose);}
 .p-sage{background:var(--sage-light);color:var(--sage);}
 .p-gold{background:var(--gold-light);color:var(--gold);}
-.p-slate{background:var(--slate-light);color:var(--slate);}
-.p-plum{background:var(--plum-light);color:var(--plum);}
 
-.tsec{padding:14px 18px;}
-.tev{display:flex;align-items:center;gap:11px;padding:9px 12px;background:var(--parchment);border-radius:10px;margin-bottom:7px;}
-.tev:last-child{margin-bottom:0;}
-.tbar{width:3px;height:32px;border-radius:2px;flex-shrink:0;}
-.br{background:var(--rose);}.bg{background:var(--gold);}.bs{background:var(--sage);}.bp{background:var(--plum);}
-.ten{font-size:13px;font-weight:500;color:var(--ink);}
-.tet{font-size:11px;color:var(--muted);margin-top:1px;font-weight:300;}
-.tquiet{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:15px;padding:4px 0;}
+/* ALERT */
+.alert{margin:10px 14px 2px;padding:10px 13px;background:#FEF3E2;border:1px solid #F0D9A0;border-radius:9px;display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#8B5E1A;line-height:1.5;}
+.adot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:4px;}
 
+/* EVENT LIST */
 .elist{padding:4px 0;}
 .erow{display:flex;align-items:flex-start;gap:11px;padding:9px 18px;border-bottom:1px solid var(--border);}
 .erow:last-child{border-bottom:none;}
@@ -79,7 +55,8 @@ body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);
 .edm{font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-weight:500;margin-top:1px;}
 .edow{font-size:8px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);font-weight:300;margin-top:1px;opacity:0.7;}
 .edot{width:7px;height:7px;border-radius:50%;margin-top:5px;flex-shrink:0;}
-.dr{background:var(--rose);}.ds{background:var(--sage);}.dg{background:var(--gold);}.dl{background:var(--slate);}.dp{background:var(--plum);}
+.dr{background:var(--rose);}.ds{background:var(--sage);}.dg{background:var(--gold);}
+.dl{background:var(--slate);}.dp{background:var(--plum);}.dgreen{background:var(--green);}
 .ebody{flex:1;}
 .en{font-size:13px;font-weight:500;color:var(--ink);}
 .et{font-size:11px;color:var(--muted);margin-top:1px;font-weight:300;}
@@ -90,11 +67,13 @@ body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);
 .csch{background:var(--slate-light);color:var(--slate);}
 .cnote{background:#FEF3E2;color:#B07020;}
 .cryan{background:var(--plum-light);color:var(--plum);}
+.csoccer{background:var(--green-light);color:var(--green);}
+.cfun{background:#EDE8F5;color:#6B4FAB;}
 
-.alert{margin:10px 14px;padding:10px 13px;background:#FEF3E2;border:1px solid #F0D9A0;border-radius:9px;display:flex;gap:9px;align-items:flex-start;font-size:12px;color:#8B5E1A;line-height:1.5;}
-.adot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:4px;}
+/* MONTH DIVIDER */
+.mhdiv{padding:8px 18px 4px;font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);background:var(--parchment);border-bottom:1px solid var(--border);}
 
-/* Amex */
+/* AMEX */
 .abody{padding:18px;}
 .agoal{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;}
 .aspent{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--ink);}
@@ -112,35 +91,13 @@ body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);
 .pace{display:flex;align-items:flex-start;gap:9px;padding:9px 12px;border-radius:9px;font-size:12px;line-height:1.5;background:#FEF3E2;color:#8B5E1A;border:1px solid #F0D9A0;}
 .pdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;background:var(--gold);margin-top:4px;}
 
-/* Shopping — flat, no categories, unchecked only */
-.shop-main{max-width:560px;margin:0 auto;padding:24px 20px;}
-.shop-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;}
-.shop-count{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--ink);}
-.shop-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:2px;}
-.shop-add{display:flex;gap:9px;align-items:center;background:var(--warm-white);border:1px solid var(--border);border-radius:14px;padding:11px 14px;margin-bottom:20px;}
-.shop-input{flex:1;border:none;background:transparent;font-family:'Jost',sans-serif;font-size:14px;color:var(--ink);outline:none;}
-.shop-input::placeholder{color:var(--muted);}
-.shop-btn{width:30px;height:30px;border-radius:50%;background:var(--rose);border:none;cursor:pointer;font-size:20px;color:white;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:300;line-height:1;}
-.shop-btn:hover{opacity:0.85;}
-.sitem{background:var(--warm-white);border:1px solid var(--border);border-radius:11px;padding:12px 14px;margin-bottom:6px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:all 0.15s;}
-.sitem:hover{border-color:var(--rose-mid);}
-.scheck{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;transition:all 0.2s;}
-.sname{font-size:14px;color:var(--ink);flex:1;}
-.sdel{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;padding:2px 5px;border-radius:5px;opacity:0;transition:opacity 0.15s;}
-.sitem:hover .sdel{opacity:1;}
-.sdel:hover{color:var(--rose);background:var(--rose-light);}
-.sempty{text-align:center;padding:36px 20px;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:16px;}
-
 .footer{text-align:center;padding:18px;font-size:12px;color:var(--muted);font-weight:300;font-family:'Cormorant Garamond',serif;font-style:italic;}
 .footer span{color:var(--rose);}
 
-@media(max-width:600px){
-  .grid2{grid-template-columns:1fr;}
-  .fw{grid-column:1;}
+@media(max-width:680px){
+  .cols{grid-template-columns:1fr;}
   .hinner{padding:20px 18px 16px;flex-direction:column;align-items:flex-start;gap:10px;}
-  .wbar{padding:10px 14px;}
-  .tabnav{padding:0 16px;}
-  .main,.shop-main{padding:16px 14px;}
+  .main{padding:16px 14px;}
 }
 </style>
 </head>
@@ -161,52 +118,190 @@ body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);
   </div>
 </div>
 
-<div class="wbar" id="wbar"></div>
+<div class="main">
+  <div class="cols">
 
-<div class="tabnav">
-  <div class="tablink active" onclick="showTab('dashboard',this)">Dashboard</div>
-  <div class="tablink" onclick="showTab('events',this)">Events</div>
-  <div class="tablink" onclick="showTab('shopping',this)">House List</div>
-</div>
-
-<!-- DASHBOARD -->
-<div id="tab-dashboard" class="tabcontent active">
-  <div class="main">
-    <div class="grid2">
-
-      <div class="card fw">
-        <div class="ch"><div class="ct">Today</div><span class="pill p-rose" id="tpill"></span></div>
-        <div class="tsec" id="today-sec"></div>
+    <!-- EVENTS COLUMN -->
+    <div class="card">
+      <div class="ch">
+        <div class="ct">Coming Up</div>
+        <span class="pill p-sage">Hearth Calendar</span>
       </div>
+      <div class="alert"><div class="adot"></div><div>Grandparents Day Apr 17 — Ryan needs to take off work! &nbsp;·&nbsp; Talent Show Apr 28 — not signed up yet!</div></div>
+      <div class="elist">
 
-      <div class="card">
-        <div class="ch"><div class="ct">This week</div><span class="pill p-sage">Quick view</span></div>
-        <div class="elist">
-          <div class="erow">
-            <div class="edate"><div class="edn">25</div><div class="edm">Wed</div></div>
-            <div class="edot dr"></div>
-            <div class="ebody"><div class="en">Dinner with Becky</div><div class="et">7:00 PM</div></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">26</div><div class="edm">Thu</div></div>
-            <div class="edot dp"></div>
-            <div class="ebody"><div class="en">Ryan Haircut</div><div class="et">8:30 AM · Pickleball 4:00 PM</div></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">27</div><div class="edm">Fri</div></div>
-            <div class="edot dg"></div>
-            <div class="ebody"><div class="en">Jayden Field Trip</div><div class="et">Ryan attending · All day</div></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">28</div><div class="edm">Sat</div></div>
-            <div class="edot dg"></div>
-            <div class="ebody"><div class="en">Charleston Trip ✈️</div><div class="et">Whole family · Mar 28–31</div></div>
-          </div>
+        <div class="mhdiv">March 2026</div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">25</div><div class="edm">Mar</div><div class="edow">Wed</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
         </div>
-      </div>
 
+        <div class="erow">
+          <div class="edate"><div class="edn">25</div><div class="edm">Mar</div><div class="edow">Wed</div></div>
+          <div class="edot dr"></div>
+          <div class="ebody"><div class="en">Dinner with Becky</div><div class="et">7:00 – 8:00 PM</div><span class="chip csoc">Social</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">26</div><div class="edm">Mar</div><div class="edow">Thu</div></div>
+          <div class="edot dp"></div>
+          <div class="ebody"><div class="en">Ryan Haircut</div><div class="et">8:30 – 9:30 AM</div><span class="chip cryan">Ryan</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">26</div><div class="edm">Mar</div><div class="edow">Thu</div></div>
+          <div class="edot ds"></div>
+          <div class="ebody"><div class="en">Jayden's Pickleball 🏓</div><div class="et">4:00 – 4:30 PM</div><span class="chip ckids">Kids</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">27</div><div class="edm">Mar</div><div class="edow">Fri</div></div>
+          <div class="edot ds"></div>
+          <div class="ebody"><div class="en">Wonders Science Center &amp; Museum</div><div class="et">All day · Jayden field trip · Ryan attending</div><span class="chip ckids">Kids</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">28</div><div class="edm">Mar</div><div class="edow">Sat</div></div>
+          <div class="edot dg"></div>
+          <div class="ebody"><div class="en">Charleston Trip ✈️</div><div class="et">Mar 28–31 · BNA→CHS · Whole family</div><span class="chip ctrip">Family Trip</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">28</div><div class="edm">Mar</div><div class="edow">Sat</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer ⚽ — vs NUSA YMCA Team 2</div><div class="et">9:15 AM · Arrive 9:00 · Crockett Park 10B · Navy</div><span class="chip csoccer">Soccer · Game</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">29</div><div class="edm">Mar</div><div class="edow">Sun</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer ⚽ — vs Kings Hammer</div><div class="et">3:30 PM · Arrive 3:00 · Osburn Park 0-9 · Navy</div><span class="chip csoccer">Soccer · Game</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">30</div><div class="edm">Mar</div><div class="edow">Mon</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="mhdiv">April 2026</div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">1</div><div class="edm">Apr</div><div class="edow">Wed</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">3</div><div class="edm">Apr</div><div class="edow">Fri</div></div>
+          <div class="edot dl"></div>
+          <div class="ebody"><div class="en">No School</div><div class="et">All day</div><span class="chip csch">School</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">4</div><div class="edm">Apr</div><div class="edow">Sat</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer ⚽ — vs McNutt/Bealer</div><div class="et">9:15 AM · Arrive 9:00 · Crockett Park 10A · Navy</div><span class="chip csoccer">Soccer · Game</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">6</div><div class="edm">Apr</div><div class="edow">Mon</div></div>
+          <div class="edot dl"></div>
+          <div class="ebody"><div class="en">No School · Reese Soccer Practice ⚽</div><div class="et">Practice 5:00 – 6:00 PM · Tower Park</div><span class="chip csch">School</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">8</div><div class="edm">Apr</div><div class="edow">Wed</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">11</div><div class="edm">Apr</div><div class="edow">Sat</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer ⚽ — vs Gordon</div><div class="et">8:00 AM · Arrive 7:45 · Crockett Park 10A · Navy</div><span class="chip csoccer">Soccer · Game</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">13</div><div class="edm">Apr</div><div class="edow">Mon</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">15</div><div class="edm">Apr</div><div class="edow">Wed</div></div>
+          <div class="edot ds"></div>
+          <div class="ebody"><div class="en">Reese Field Trip · Soccer Practice ⚽</div><div class="et">Field trip all day · Practice 5:00 PM Tower Park</div><span class="chip ckids">Kids</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">17</div><div class="edm">Apr</div><div class="edow">Fri</div></div>
+          <div class="edot dr"></div>
+          <div class="ebody"><div class="en">Grandparents Day – GCA</div><div class="et">8:00 – 10:00 AM</div><span class="chip cnote">Ryan off work</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">20</div><div class="edm">Apr</div><div class="edow">Mon</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">22</div><div class="edm">Apr</div><div class="edow">Wed</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">27</div><div class="edm">Apr</div><div class="edow">Mon</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">28</div><div class="edm">Apr</div><div class="edow">Tue</div></div>
+          <div class="edot ds"></div>
+          <div class="ebody"><div class="en">Dance · Mr. John · GCA Talent Show</div><div class="et">3:00 PM · 4:00 PM · Show 6:00 PM</div><span class="chip cnote">Not signed up yet!</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">29</div><div class="edm">Apr</div><div class="edow">Wed</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="mhdiv">May 2026</div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">1</div><div class="edm">May</div><div class="edow">Fri</div></div>
+          <div class="edot dp"></div>
+          <div class="ebody"><div class="en">NERF WARS 🎯</div><div class="et">6:00 – 7:30 PM · MPact Sports, Franklin</div><span class="chip cfun">Fun</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">4</div><div class="edm">May</div><div class="edow">Mon</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+        <div class="erow">
+          <div class="edate"><div class="edn">6</div><div class="edm">May</div><div class="edow">Wed</div></div>
+          <div class="edot dgreen"></div>
+          <div class="ebody"><div class="en">Reese Soccer Practice ⚽</div><div class="et">5:00 – 6:00 PM · Tower Park</div><span class="chip csoccer">Soccer</span></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- AMEX COLUMN -->
+    <div>
       <div class="card">
-        <div class="ch"><div class="ct">Amex Spending</div><span class="pill p-gold">Mar 20 – Apr 17</span></div>
+        <div class="ch">
+          <div class="ct">Amex Spending</div>
+          <span class="pill p-gold">Mar 20 – Apr 17</span>
+        </div>
         <div class="abody">
           <div class="agoal">
             <div>
@@ -216,221 +311,29 @@ body{font-family:'Jost',sans-serif;background:var(--parchment);color:var(--ink);
             <div style="text-align:right;"><div class="aglabel">Goal</div><div class="agnum">$6,000</div></div>
           </div>
           <div class="pwrap"><div class="pfill" style="width:14.8%"></div><div class="pline"></div></div>
-          <div class="ameta"><span>14.8% of goal used</span><span><strong>$5,111.44</strong> remaining</span></div>
+          <div class="ameta"><span>14.8% used</span><span><strong>$5,111.44</strong> left</span></div>
           <div class="astats">
             <div class="astat"><div class="asn">13</div><div class="asl">Transactions</div></div>
             <div class="astat"><div class="asn">24</div><div class="asl">Days left</div></div>
             <div class="astat"><div class="asn">$213</div><div class="asl">Max/day</div></div>
           </div>
-          <div class="pace"><div class="pdot"></div><div>Tracking ~$222/day — just above goal pace. Keep under $213/day to hit $6,000.</div></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="footer">Last updated <span id="fd1"></span> · Tell Claude to update this dashboard</div>
-</div>
-
-<!-- EVENTS -->
-<div id="tab-events" class="tabcontent">
-  <div class="main">
-    <div class="grid2">
-      <div class="card fw">
-        <div class="ch"><div class="ct">Coming Up</div><span class="pill p-sage">Next 30 days</span></div>
-        <div class="alert"><div class="adot"></div><div>Grandparents Day Apr 17 — Ryan needs to take off work!</div></div>
-        <div class="elist">
-          <div class="erow">
-            <div class="edate"><div class="edn">25</div><div class="edm">Mar</div><div class="edow">Wed</div></div>
-            <div class="edot dr"></div>
-            <div class="ebody"><div class="en">Dinner with Becky</div><div class="et">7:00 – 8:00 PM</div><span class="chip csoc">Social</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">26</div><div class="edm">Mar</div><div class="edow">Thu</div></div>
-            <div class="edot dp"></div>
-            <div class="ebody"><div class="en">Ryan Haircut</div><div class="et">8:30 AM · Thursday</div><span class="chip cryan">Ryan</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">26</div><div class="edm">Mar</div><div class="edow">Thu</div></div>
-            <div class="edot ds"></div>
-            <div class="ebody"><div class="en">Jayden's Pickleball</div><div class="et">4:00 – 4:30 PM</div><span class="chip ckids">Kids</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">27</div><div class="edm">Mar</div><div class="edow">Fri</div></div>
-            <div class="edot dg"></div>
-            <div class="ebody"><div class="en">Jayden Field Trip</div><div class="et">All day · Ryan attending</div><span class="chip cryan">Ryan attending</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">28</div><div class="edm">Mar</div><div class="edow">Sat</div></div>
-            <div class="edot dg"></div>
-            <div class="ebody"><div class="en">Charleston Trip ✈️</div><div class="et">Mar 28–31 · BNA→CHS · Whole family</div><span class="chip ctrip">Family Trip</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">3</div><div class="edm">Apr</div><div class="edow">Fri</div></div>
-            <div class="edot dl"></div>
-            <div class="ebody"><div class="en">No School</div><div class="et">All day</div><span class="chip csch">School</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">15</div><div class="edm">Apr</div><div class="edow">Wed</div></div>
-            <div class="edot ds"></div>
-            <div class="ebody"><div class="en">Reese Field Trip</div><div class="et">All day</div><span class="chip ckids">Kids</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">17</div><div class="edm">Apr</div><div class="edow">Fri</div></div>
-            <div class="edot dr"></div>
-            <div class="ebody"><div class="en">Grandparents Day – GCA</div><div class="et">8:00 – 10:00 AM</div><span class="chip cnote">Ryan off work</span></div>
-          </div>
-          <div class="erow">
-            <div class="edate"><div class="edn">28</div><div class="edm">Apr</div><div class="edow">Tue</div></div>
-            <div class="edot dl"></div>
-            <div class="ebody"><div class="en">GCA Talent Show</div><div class="et">6:00 – 6:30 PM</div><span class="chip cnote">Not signed up yet!</span></div>
-          </div>
+          <div class="pace"><div class="pdot"></div><div>Tracking ~$222/day — just above goal pace. Stay under $213/day to hit $6,000.</div></div>
         </div>
       </div>
     </div>
+
   </div>
-  <div class="footer">Last updated <span id="fd2"></span> · Tell Claude to add or update events</div>
 </div>
 
-<!-- SHOPPING — flat unchecked only -->
-<div id="tab-shopping" class="tabcontent">
-  <div class="shop-main">
-    <div class="shop-meta">
-      <div>
-        <div class="shop-count" id="shop-count">0</div>
-        <div class="shop-label">items to get</div>
-      </div>
-      <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--muted);">Tap to check off</div>
-    </div>
-    <div class="shop-add">
-      <input class="shop-input" id="shop-input" type="text" placeholder="Add an item..." onkeydown="if(event.key==='Enter')addItem()">
-      <button class="shop-btn" onclick="addItem()">+</button>
-    </div>
-    <div id="shop-list"></div>
-  </div>
-  <div class="footer">Last updated <span id="fd3"></span> · Tell Claude to update the list</div>
-</div>
+<div class="footer">Last updated <span id="fd1"></span> · Tell Claude to update when you have new data</div>
 
 <script>
 const now = new Date();
 const MO=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const DY=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-const DS=['SUN','MON','TUE','WED','THU','FRI','SAT'];
-const dateStr=MO[now.getMonth()]+' '+now.getDate()+', '+now.getFullYear();
-document.getElementById('hdn').textContent=now.getDate();
-document.getElementById('hdd').textContent=DY[now.getDay()].toUpperCase()+' · '+MO[now.getMonth()].toUpperCase();
-document.getElementById('tpill').textContent=MO[now.getMonth()]+' '+now.getDate();
-['fd1','fd2','fd3'].forEach(id=>document.getElementById(id).textContent=dateStr);
-
-// Week bar
-const wb=document.getElementById('wbar');
-const tod=now.getDay();
-const sow=new Date(now);sow.setDate(now.getDate()-tod);
-const we={1:true,2:true,3:true,4:true,5:true,6:true};
-for(let i=0;i<7;i++){
-  const d=new Date(sow);d.setDate(sow.getDate()+i);
-  const p=document.createElement('div');
-  p.className='wpill'+(i===tod?' today':'')+(we[i]?' hev':'');
-  p.innerHTML=`<div class="wpill-d">${DS[i]}</div><div class="wpill-n">${d.getDate()}</div>${we[i]?'<div class="pip"></div>':'<div style="height:7px"></div>'}`;
-  wb.appendChild(p);
-}
-
-// Today's events — pulled from Hearth calendar
-const todayEvsByDay={
-  1:[// Mon
-    {name:'Dance',time:'3:00 – 4:00 PM',bar:'bs'},
-    {name:'Mr. John',time:'4:00 – 5:00 PM',bar:'bg'},
-  ],
-  2:[// Tue
-    {name:'Dance',time:'3:00 – 4:00 PM',bar:'bs'},
-    {name:'Mr. John',time:'4:00 – 5:00 PM',bar:'bg'},
-  ],
-  3:[// Wed
-    {name:'Dinner with Becky',time:'7:00 – 8:00 PM',bar:'br'},
-  ],
-  4:[// Thu
-    {name:'Ryan Haircut',time:'8:30 AM',bar:'bp'},
-    {name:'Jayden\'s Pickleball',time:'4:00 – 4:30 PM',bar:'bs'},
-  ],
-  5:[// Fri
-    {name:'Jayden Field Trip',time:'All day · Ryan attending',bar:'bg'},
-  ],
-};
-const tsec=document.getElementById('today-sec');
-const evs=todayEvsByDay[tod]||[];
-if(!evs.length){
-  tsec.innerHTML='<div class="tquiet">Nothing scheduled today — enjoy a quiet one.</div>';
-}else{
-  evs.forEach(e=>{
-    const d=document.createElement('div');
-    d.className='tev';
-    d.innerHTML=`<div class="tbar ${e.bar}"></div><div><div class="ten">${e.name}</div><div class="tet">${e.time}</div></div>`;
-    tsec.appendChild(d);
-  });
-}
-
-// Tabs
-function showTab(name,el){
-  document.querySelectorAll('.tabcontent').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.tablink').forEach(t=>t.classList.remove('active'));
-  document.getElementById('tab-'+name).classList.add('active');
-  el.classList.add('active');
-}
-
-// Shopping list — UNCHECKED ONLY, flat, no categories
-// Claude updates this array when rebuilding the file
-let items=[
-  {id:1,  name:'Blueberry Kind bars'},
-  {id:2,  name:'BBQ'},
-  {id:3,  name:'Bottled water'},
-  {id:4,  name:'Toothpaste'},
-  {id:5,  name:'Draino'},
-  {id:6,  name:'Wipes'},
-  {id:7,  name:'Pizza'},
-  {id:8,  name:'Protein powder'},
-  {id:9,  name:'Probiotic'},
-];
-
-// Load any in-session additions from localStorage
-const saved=localStorage.getItem('hearth_shop_v3');
-if(saved){try{items=JSON.parse(saved);}catch(e){}}
-
-function save(){localStorage.setItem('hearth_shop_v3',JSON.stringify(items));}
-
-function render(){
-  const c=document.getElementById('shop-list');
-  document.getElementById('shop-count').textContent=items.length;
-  if(!items.length){c.innerHTML='<div class="sempty">List is empty — nothing to get!</div>';return;}
-  c.innerHTML='';
-  items.forEach(item=>{
-    const div=document.createElement('div');
-    div.className='sitem';
-    div.innerHTML=`<div class="scheck"></div><div class="sname">${item.name}</div><button class="sdel" onclick="removeItem(${item.id},event)">×</button>`;
-    div.onclick=()=>checkOff(item.id);
-    c.appendChild(div);
-  });
-}
-
-function checkOff(id){
-  // Just removes from list — no completed state shown
-  items=items.filter(x=>x.id!==id);
-  save();render();
-}
-
-function removeItem(id,e){
-  e.stopPropagation();
-  items=items.filter(x=>x.id!==id);
-  save();render();
-}
-
-function addItem(){
-  const inp=document.getElementById('shop-input');
-  const name=inp.value.trim();
-  if(!name)return;
-  items.push({id:Date.now(),name});
-  inp.value='';save();render();inp.focus();
-}
-
-render();
+document.getElementById('hdn').textContent = now.getDate();
+document.getElementById('hdd').textContent = DY[now.getDay()].toUpperCase() + ' · ' + MO[now.getMonth()].toUpperCase();
+document.getElementById('fd1').textContent = MO[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
 </script>
 </body>
 </html>
